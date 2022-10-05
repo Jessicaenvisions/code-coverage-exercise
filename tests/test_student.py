@@ -45,4 +45,15 @@ def test_get_student_with_more_classes():
     
     assert result == ada
     
-    #  write assertions
+
+def test_get_student_with_more_classes_student_a():
+    charles = Student("Charles Babbage", "senior", ["mechanical engineering"])
+    ada = Student(
+        "Ada Lovelace",
+        "sophomore",
+        ["mathematics", "foundations of computing"]
+    )
+
+    result = get_student_with_more_classes(ada, charles)
+    
+    assert result == ada
